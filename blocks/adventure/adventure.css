@@ -1,0 +1,44 @@
+.section.adventures h2{
+    font-family: "Asar", serif;
+    font-weight: 400;
+  }
+  .section.adventures h2#next-adventures::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+  }
+  .adventure-container .adventure-wrapper{
+    padding: 0px;
+    max-width: 100%;
+  }
+  .adventure-container .adventure-wrapper img{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .adventure-container .adventure-wrapper .adventure p:first-child{
+    height: 40pc;
+    position: relative;
+    overflow: hidden;
+  }
+  .adventure.block div div div{
+    width: 71pc;
+    margin: -180px auto 0;
+    position: relative;
+    background: #fff;
+    padding: 2px 28px 0;
+  }
+  .adventure.block div div div .button-container a{
+    background-color: #ffea00;
+    border-radius: 0;
+    color: #202020;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+  }
+  .adventure.block div div div h2#climbing-new-zealand{
+    margin: 20px 0 2px 0;
+  }

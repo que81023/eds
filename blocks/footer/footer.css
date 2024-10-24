@@ -1,6 +1,7 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #202020;
+  font-size: 14px;
+  color: #ebebeb;
 }
 
 footer .footer > div {
@@ -9,12 +10,63 @@ footer .footer > div {
   padding: 40px 24px 24px;
 }
 
-footer .footer p {
-  margin: 0;
-}
 
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
+  footer .default-content-wrapper img{
+    width:128px;
+    height: auto;
+  }
+  footer{
+    margin-top: 80px;
+  }
+}
+footer .default-content-wrapper p{
+  font-size: 12px;
+}
+footer .container{
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center; 
+  margin-bottom: 40px;
+}
+footer .container .section {
+  /* flex: 1; */
+  margin: 0 24px;
+}
+footer .container .section:nth-child(3){
+  flex:2;
+}
+footer .container .section ul{
+  float: right;
+}
+footer .container .section ul li{
+  display: inline-block;
+  padding: 4px 8px;
+ }
+ footer .container .section ul li.follow-us{
+  display: flex;
+  align-items: center;
+}
+footer .container .section ul li.follow-us span{
+  font-family: "Font Awesome 6 Brands"; 
+  font-size: 1.2em; 
+  background: #ebebeb;
+  color: #202020;
+  padding: 10px;
+  margin-top: -16px;
+}
+footer .container .follow-us span:nth-child(1){
+  margin-left: 16px;
+}
+.follow-us span:nth-child(1)::after{
+  content: "\f39e";
+}
+.follow-us span:nth-child(2)::after{
+  content: "\f099";
+}
+.follow-us span:nth-child(3)::after{
+  content: "\f16d";
 }

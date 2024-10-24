@@ -13,7 +13,7 @@
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 8px 0px;
 }
 
 .cards .cards-card-image {
@@ -24,4 +24,52 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+.articles-wknd h2{
+  font-family: "Asar", serif;
+  font-weight: 400;
+}
+.articles-wknd h2::after, .all-articles h2::after{
+  border-bottom: 2px solid var(--brandPrimary, #ffea00);
+  content: "";
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+}
+.cards-card-body p:first-child{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+.where-go h3#where-do-you-want-to-go{
+  font-family: "Asar", serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.cards > ul > li{
+  border: 0;
+  background-color: #fff;
+}
+.cards-card-body p:nth-child(2){
+  font-size: 14px;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section .button-container a{
+  background-color: #ffea00;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #202020;
+  border-radius: 0px;
+  padding: 14px 30px;
+  margin-bottom: 60px;
+}
+.articles-wknd .button-container, .where-go .button-container{
+  border-bottom: 2px solid #ebebeb;
 }

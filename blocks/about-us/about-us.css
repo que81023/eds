@@ -1,0 +1,53 @@
+.about-us-container {
+  padding-top: 20px;
+}
+.about-us-container h1{
+  font-family: "Asar", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+}
+.about-us-container .default-content-wrapper p{
+  font-size: 14px;
+  line-height: 35px;
+  margin-bottom: 14px;
+}
+.about-us-container .cards-card-image img{
+  border-radius: 50%;
+  width: 164px;
+  height: 164px;
+  margin:16px auto;
+  display: block;
+}
+.about-us-container .cards-card-body h3{
+  font-size: 24px;
+  line-height: 36px;
+  font-family: "Asar", serif;
+  font-weight: 400;
+  text-align: center;
+}
+.about-us-container .cards-card-body h5{
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+.socialMedia-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.socialMedia-link span{
+  font-family: "Font Awesome 6 Brands"; 
+  font-size: 1.2em; 
+  color: #ebebeb;
+  background: #202020;
+  padding: 12px;
+}
+.socialMedia-link a:nth-child(1) span::after{
+    content: "\f39e";
+}
+.socialMedia-link a:nth-child(2) span::after{
+    content: "\f099";
+}
+.socialMedia-link a:nth-child(3) span::after{
+    content: "\f16d";
+}

@@ -4,6 +4,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  padding: 50px 0;
 }
 
 header nav {
@@ -35,13 +36,18 @@ header nav[aria-expanded='true'] {
     display: flex;
     justify-content: space-between;
     gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
+    max-width: 873pt;
+    padding: 0 14px;
   }
 
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+  }
+  .header-wrapper .header{
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
   }
 }
 
@@ -220,7 +226,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 0px;
     margin: 0;
   }
 
@@ -260,9 +266,34 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
   }
+  .scrolled .nav-wrapper{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+.scrolled .nav-wrapper{
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .26);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .26);
+  -webkit-transition: padding-bottom .5s ease, padding-top .5s;
+  -webkit-transition: padding-bottom .5s ease-out, padding-top .5s ease ease-out .25s;
+  transition: padding-bottom .5s ease-out, padding-top .5s ease ease-out .25s;
+}
+.top-header{
+  background-color: #202020;
+  color: #f7f7f7;
+  font-size: 14px;
+  padding: 3px 200px 3px 3px;
+  text-align: right;
+}
+.top-header span{
+  margin-right: 10px;
+}
+.top-header img{
+  width:20px;
+  margin: 0px 10px 0px 20px;
 }

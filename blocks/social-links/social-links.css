@@ -1,0 +1,46 @@
+.social-links-container h2{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.social-media{
+    font-family: "Font Awesome 6 Brands"; 
+    font-size: 1.2em;   
+}
+.social-media a{
+    padding: 16px;
+}
+.social-media a:nth-child(1){
+    background-color: #3B65BA;
+    color:#fff
+}
+.social-media a:nth-child(2){
+    background-color: #21A6F5;
+    color:#fff
+}
+.social-media a:nth-child(3){
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);;
+    color:#fff
+}
+.social-media a:nth-child(4){
+    background-color: #EE3130;
+    color:#fff
+}
+.social-media a:nth-child(5){
+    background-color: #0270AD;
+    color:#fff
+}
+.social-media a:nth-child(1) span::after{
+    content: "\f39e";
+}
+.social-media a:nth-child(2) span::after{
+    content: "\f099";
+}
+.social-media a:nth-child(3) span::after{
+    content: "\f16d";
+}
+.social-media a:nth-child(4) span::after{
+    content: "\f167";
+}
+.social-media a:nth-child(5) span::after{
+    content: "\f08c";
+}

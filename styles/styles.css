@@ -9,6 +9,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Asar&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+ @import 'font-awesome/css/font-awesome.css';
 
 :root {
   /* colors */
@@ -20,7 +22,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
+  /* --body-font-family: roboto, roboto-fallback, sans-serif; */
+  --body-font-family: "Source Sans 3", sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
@@ -218,8 +221,8 @@ main img {
 
 .icon {
   display: inline-block;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
 }
 
 .icon img {
@@ -244,7 +247,9 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 14px;
+    /* max-width: 1169px; */
+    max-width: 1140px;
   }
 }
 
@@ -254,4 +259,54 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+.nav-sections .default-content-wrapper{
+  float: right;
+}
+header nav .nav-sections .default-content-wrapper > ul > li{
+  padding: 15px 17px;
+  font-size: 14px;
+}
+.nav-tools div{
+  background-color: #ebebeb8a;
+  width: 140px;
+  font-size: 14px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.nav-tools div p{
+  display: flex;
+  align-items: center;
+}
+.nav-tools .icon-search img{
+  transform: rotate(90deg);
+}
+main{
+  margin-top: 128px;
+}
+main > .section.columns-container {
+  margin: 80px 0;
+}
+.magazine-col div h1{
+  font-family: "Asar", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+  padding-top: 40px;
+}
+h2{
+  font-family: "Asar", serif;
+  font-weight: 400;
+}
+.member-only h2::after, .about-us-container h2::after, .social-links-container h2::after{
+  border-bottom: 2px solid var(--brandPrimary, #ffea00);
+  content: "";
+  display: block;
+  padding-top: 8px;
+  width: 84px;
+}
+.member-only .default-content-wrapper p{ 
+  border-bottom: 2px solid #ebebeb;
+  padding-bottom: 40px;
 }

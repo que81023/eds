@@ -5,6 +5,7 @@
 
 .columns img {
   width: 100%;
+  height: 100%;
 }
 
 .columns > div > div {
@@ -13,15 +14,24 @@
 
 .columns > div > .columns-img-col {
   order: 0;
+  flex: 2;
 }
-
+.column-bg{
+  line-height: normal;
+}
+.column-bg .columns-2-cols, .magazine-col .columns-2-cols{
+  background-color: #ebebeb;
+}
+.column-bg .columns-2-cols div:nth-of-type(2), .magazine-col .columns-2-cols div:nth-of-type(2){
+  padding: 40px 26px 26px 26px;
+}
 .columns > div > .columns-img-col img {
   display: block;
 }
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    /* align-items: center; */
     flex-direction: unset;
     gap: 24px;
   }
@@ -30,4 +40,23 @@
     flex: 1;
     order: unset;
   }
+}
+#camping-in-western-australia{
+  font-family: "Asar", serif;
+  font-weight: 400;
+  line-height: 54px;
+}
+.column-bg .columns-2-cols div p:nth-of-type(2), .magazine-col .columns-2-cols div p:nth-of-type(2){
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.column-bg .columns-2-cols div .button-container a{
+  background-color: #ffea00;
+  border-radius: 0;
+  color: #202020;
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1em 2.5em;
+  text-transform: uppercase;
 }

@@ -17,4 +17,53 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  // Select the two section divs
+  const section1 = document.querySelector('footer div.section:nth-of-type(1)');
+  const section2 = document.querySelector('footer div.section:nth-of-type(2)');
+  const section3 = document.querySelector('footer div.section:nth-of-type(3)');
+  // Create a new parent <div>
+  const newParentDiv = document.createElement('div');
+  newParentDiv.classList.add('container'); // Optional: Add a class for styling
+
+  // Insert the new parent div before the first section
+  section1.parentNode.insertBefore(newParentDiv, section1);
+
+  // Move the two sections into the new parent div
+  newParentDiv.appendChild(section1);
+  newParentDiv.appendChild(section2);
+  newParentDiv.appendChild(section3);
+
+  //*add class in li 
+   // Select the <li> element
+  const followUsItem = document.querySelector('.footer .section:nth-of-type(3) ul li');
+
+   // Add the class 'follow-us' to the <li>
+  followUsItem.classList.add('follow-us');
+
+  //*add span and anchor
+   // Select the follow-us list item
+   //const followUsItemList = document.querySelector('.footer .section ul li.follow-us');
+
+   // Create an array of social media platforms and their links
+   const socialLinks = [
+       { url: 'https://www.facebook.com', icon: 'Facebook Icon' },
+       { url: 'https://www.twitter.com', icon: 'Twitter Icon' },
+       { url: 'https://www.instagram.com', icon: 'Instagram Icon' },
+   ];
+     // Loop through the array and create spans with anchors
+     socialLinks.forEach(link => {
+      const span = document.createElement('span'); // Create a span element
+      const anchor = document.createElement('a'); // Create an anchor element
+
+      anchor.href = link.url; // Set the href attribute
+      anchor.textContent = link.name; // Set the text for the anchor
+      anchor.title = link.icon; // Optionally, set the title for the anchor
+
+      span.appendChild(anchor); // Append the anchor to the span
+      followUsItem.appendChild(span); // Append the span to the list item
+
+      // Add a space or separator (optional)
+      followUsItem.appendChild(document.createTextNode(' ')); // Add a space between links
+  });
 }

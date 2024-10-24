@@ -163,4 +163,47 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  //add top header
+  // Create a new header element
+  const topHeaderDiv = document.createElement('div');
+
+  // Select the nav wrapper
+  const navWrap = document.querySelector('.nav-wrapper');
+
+  // Insert the header before the nav
+  navWrap.parentNode.insertBefore(topHeaderDiv, navWrap);
+
+  //add class topheader div
+  const topheader = document.querySelector('.header > div');
+  topheader.classList.add('top-header');
+
+  //*add 2 span inside top header
+  // Select the top header div
+  const topHeader = document.querySelector('.top-header');
+
+  // Create two span elements
+  const span1 = document.createElement('span');
+  span1.textContent = 'SIGN IN';
+  const img = document.createElement('img');
+  img.src = '/images/US.png'; 
+  const span2 = document.createElement('span');
+  span2.textContent = 'EN-US ˅'; 
+  
+  // Append the spans to the top header
+  topHeader.appendChild(span1);
+  topHeader.appendChild(img);
+  topHeader.appendChild(span2);
+
+  //add class in body
+  const toggleScrollClass = () => {
+    if (window.scrollY > 50) { // Change 50 to your desired scroll threshold
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+};
+
+// Listen for the scroll event
+window.addEventListener('scroll', toggleScrollClass);
 }
