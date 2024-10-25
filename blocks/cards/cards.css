@@ -29,7 +29,7 @@
   font-family: "Asar", serif;
   font-weight: 400;
 }
-.articles-wknd h2::after, .all-articles h2::after{
+.articles-wknd h2::after, .all-articles h2::after, .dynamic-card h2::after{
   border-bottom: 2px solid var(--brandPrimary, #ffea00);
   content: "";
   display: block;

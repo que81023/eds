@@ -1,23 +1,26 @@
-.hero-container .hero-wrapper {
+/* .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
-}
+} */
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 0px;
 }
 
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: #202020;
+  font-family: "Asar", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
 }
 
 .hero picture {
-  position: absolute;
+  /* position: absolute; */
   z-index: -1;
   inset: 0;
   object-fit: cover;
@@ -30,8 +33,8 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+/* @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
   }
-}
+} */
