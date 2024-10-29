@@ -1,10 +1,10 @@
 
 export default function decorate(block){
    
-    // Select the <h2> element
+    // Select the element with class '.adventure h2#climbing-new-zealand'
     const targetHeading = document.querySelector('.adventure h2#climbing-new-zealand');
 
-    // Select the first <p> element (the one following <h2>)
+    // Select the first <p> element
     const targetParagraph = targetHeading.nextElementSibling;
 
     // Select the <p> element with the class "button-container"

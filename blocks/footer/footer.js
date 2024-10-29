@@ -41,10 +41,6 @@ export default async function decorate(block) {
    // Add the class 'follow-us' to the <li>
   followUsItem.classList.add('follow-us');
 
-  //*add span and anchor
-   // Select the follow-us list item
-   //const followUsItemList = document.querySelector('.footer .section ul li.follow-us');
-
    // Create an array of social media platforms and their links
    const socialLinks = [
        { url: 'https://www.facebook.com', icon: 'Facebook Icon' },
@@ -60,10 +56,10 @@ export default async function decorate(block) {
       anchor.textContent = link.name; // Set the text for the anchor
       anchor.title = link.icon; // Optionally, set the title for the anchor
 
-      span.appendChild(anchor); // Append the anchor to the span
-      followUsItem.appendChild(span); // Append the span to the list item
+      anchor.appendChild(span); // Append the anchor to the span
+      followUsItem.appendChild(anchor); // Append the span to the list item
 
       // Add a space or separator (optional)
-      followUsItem.appendChild(document.createTextNode(' ')); // Add a space between links
+      //followUsItem.appendChild(document.createTextNode(' ')); // Add a space between links
   });
 }

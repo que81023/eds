@@ -6,7 +6,7 @@ form label{
     display: block;
 }
 form{
-    background-color: #c2c2c2;
+    background-color: #E8E9EB;
     padding: 26px;
     width: 50%;
     margin: 0 auto;
@@ -23,8 +23,12 @@ form input, form textarea{
     border-left: 0;
     border-right: 0;
 }
+form input:focus-visible, form textarea:focus-visible{
+    outline: 0;
+}
 form button{
-    background-color: #58B747;
+    background-color: #1d3ecf;
     color: #fff;
-    padding: 6px 26px;
+    padding: 8px 28px;
+    font-size: 16px;
 }

@@ -43,12 +43,12 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
-  }
-  .header-wrapper .header{
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-  }
+  } 
+}
+.header-wrapper .header{
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
 }
 
 header nav p {
@@ -296,4 +296,36 @@ header nav .nav-tools {
 .top-header img{
   width:20px;
   margin: 0px 10px 0px 20px;
+}
+.nav-sections ul li:hover, .nav-sections ul li.active{
+  background-color: #ffea00;
+  text-decoration: none;
+}
+.nav-sections ul li a{
+  text-decoration: none;
+}
+@media (max-width:767.98px){
+  header .nav-wrapper{
+    padding: 26px 0;
+  }
+  main {
+    margin-top: 80px;
+  }
+  header nav .nav-brand img {
+    width: 100px;
+  }
+  .search-container input{
+    font-size: 12px;
+  }
+  .nav-tools .search-container{
+    width:100%;
+  }
+  .search-container .icon{
+    left:6px;
+    top:60%;
+    font-size: 16px;
+  }
+  .search-container input{
+    padding: 8px 4px 8px 26px;
+  }
 }

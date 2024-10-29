@@ -42,3 +42,15 @@
   .adventure.block div div div h2#climbing-new-zealand{
     margin: 20px 0 2px 0;
   }
+  @media (max-width:767.98px){
+    .adventure-container .adventure-wrapper img{
+        position: static;
+    }
+    .adventure.block div div div{
+        width:auto;
+        margin: auto;
+    }
+    .adventure-container .adventure-wrapper .adventure p:first-child{
+        height: auto;
+    }
+  }

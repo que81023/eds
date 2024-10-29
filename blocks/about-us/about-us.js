@@ -1,23 +1,11 @@
 export default async function decorate(block){
-    // const h5Element = document.querySelector('.cards-card-body h5');
-
-    // // Create a new div element
-    // const newDiv = document.createElement('div');
-
-    // // Insert the new div after the h5 element
-    // h5Element.insertAdjacentElement('afterend', newDiv);
-    // newDiv.classList.add('socialMedia-link');
-
-
-// Select all div elements with the class 'cards-card-body'
+// Select all h5 elements from parent div
 const cardImages = document.querySelectorAll('div h5');
-console.log(cardImages);
 
 // Loop through each div and append a new child element
 cardImages.forEach(cardImage => {
     const newChild = document.createElement('div');
     newChild.classList.add('socialMedia-link');
-    console.log(cardImage);
     // Append the new child element to the current cardImage div
     cardImage.appendChild(newChild);
      // Create an array of social media platforms and their links

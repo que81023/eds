@@ -204,6 +204,40 @@ export default async function decorate(block) {
     }
 };
 
-// Listen for the scroll event
-window.addEventListener('scroll', toggleScrollClass);
+  // Listen for the scroll event
+  window.addEventListener('scroll', toggleScrollClass);
+
+  // Create the input element
+  const searchContainer = document.createElement('div');
+  searchContainer.className = 'search-container';
+  const searchInput = document.createElement('input');
+  searchInput.type = 'text';
+  searchInput.placeholder = 'Search';
+  searchInput.setAttribute('aria-label', 'Search');
+  const searchIcon = document.createElement('span');
+  searchIcon.className = 'icon icon-search';
+  searchIcon.innerHTML = '<i class="fas fa-search"></i>';
+
+  searchContainer.appendChild(searchIcon);
+  searchContainer.appendChild(searchInput);
+
+  // Append the input to the default-content-wrapper
+  const wrapper = document.querySelector('.nav-tools .default-content-wrapper');
+  wrapper.appendChild(searchContainer);
+
+  //active menu section
+  // Get the current URL path
+  const currentPath = window.location.pathname;
+
+  // Select all navigation items
+  const navItems = document.querySelectorAll('.nav-sections li');
+
+  // Loop through the items to find the active one
+  navItems.forEach(item => {
+      const link = item.querySelector('a');
+      // Check if the link's href matches the current path
+      if (link && link.getAttribute('href') === currentPath) {
+          item.classList.add('active'); // Add active class
+      }
+  });
 }

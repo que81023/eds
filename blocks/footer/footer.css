@@ -46,27 +46,76 @@ footer .container .section ul li{
   display: inline-block;
   padding: 4px 8px;
  }
- footer .container .section ul li.follow-us{
-  display: flex;
-  align-items: center;
-}
 footer .container .section ul li.follow-us span{
   font-family: "Font Awesome 6 Brands"; 
   font-size: 1.2em; 
   background: #ebebeb;
   color: #202020;
-  padding: 10px;
-  margin-top: -16px;
+  padding: 14px;
 }
-footer .container .follow-us span:nth-child(1){
+footer .container .follow-us a:nth-child(1){
   margin-left: 16px;
 }
-.follow-us span:nth-child(1)::after{
+footer .container .follow-us a{
+  text-decoration: none;
+}
+.follow-us a:nth-child(1) span::after{
   content: "\f39e";
 }
-.follow-us span:nth-child(2)::after{
+.follow-us a:nth-child(2) span::after{
   content: "\f099";
 }
-.follow-us span:nth-child(3)::after{
+.follow-us a:nth-child(3) span::after{
   content: "\f16d";
+}
+.footer-content{
+  padding: 0 24px;
+}
+.footer-content p a{
+  color:#fff;
+}
+@media (max-width:767.98px) {
+  footer .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .container .section ul li{
+    list-style: none;
+    display: block;
+  }
+  .footer .default-content-wrapper img{
+    width:100px;
+    height: auto;
+  }
+  footer .container .section{
+    margin: 0;
+  }
+  footer .container .section ul {
+    float: left;
+    padding-left: 0px;
+  }
+  footer .container .section:nth-child(3){
+    grid-column: 1 / -1;
+  }
+  .footer-content{
+    padding: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer .container .section{
+    margin: 0;
+  }
+  .footer .default-content-wrapper img{
+    width:106px;
+    height: auto;
+  }
+  .footer-content{
+    padding: 0px;
+  }
+  .adventure-container .adventure-wrapper img{
+    position: static;
+  }
+  .adventure.block div div div{
+    width:unset;
+  }
 }

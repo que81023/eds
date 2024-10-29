@@ -19,8 +19,8 @@ export default async function decorate(block){
             const form = document.createElement('form');
 
             // Set action and method attributes
-            form.action = 'your-server-endpoint.com/submit'; // Replace with your actual endpoint
-            form.method = 'POST'; // or 'GET' depending on your needs
+            form.action = '/submit-data.json'; 
+            form.method = 'POST'; 
             form.id = 'register';        
 
             formData.forEach(field => {
@@ -56,6 +56,8 @@ export default async function decorate(block){
                 }
                 form.appendChild(input);
             });
+            // Append form to the container
+            formContainer.appendChild(form);
 
             // Handle form submission
             form.addEventListener('submit', function(event) {
@@ -69,7 +71,7 @@ export default async function decorate(block){
 
                 // Log user information as JSON
                 console.log('User Information:', JSON.stringify(userInfo, null, 2));
-                fetch('/submit-data.json', { // Updated URL
+                fetch('/submit-data.json', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -90,14 +92,7 @@ export default async function decorate(block){
                 form.reset();
             });
 
-            // // Create submit button
-            // const submitButton = document.createElement('button');
-            // submitButton.type = 'submit'; // Set the button type to submit
-            // submitButton.textContent = 'Submit';
-            // form.appendChild(submitButton);
-
-            // Append form to the container
-            formContainer.appendChild(form);
+            
         } else {
             console.error('No elements found with the class "registration".');
         }
